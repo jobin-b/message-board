@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <p>Welcome to <%= title %></p>
+    <button onclick="window.location='/new'"> Create Message</button>
+    <div class="messages">
+      <% messages.map(function(message){ %>
+        <div>
+          <p>Date: <%= message.added %></p>
+          <p>User: <%= message.user %></p>
+          <p>Sent: <%= message.text %></p>
+        </div>
+
+      <% }); %>
+    </div>
+  </body>
+</html>
